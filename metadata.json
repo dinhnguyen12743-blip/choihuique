@@ -1,0 +1,6 @@
+{
+  "name": "Quản Lý Hụi Pro 2026",
+  "description": "Nền tảng quản lý tài chính dây hụi chuyên nghiệp, tự động tính toán tiền hốt, tiền thảo và phân tích rủi ro thông minh cho chủ hụi Việt Nam.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  /* Elegant Satin Gold & Royal Obsidian Noir Palette */
+  --color-sky-50: #faf9f6;         /* Lux Warm Silk Canvas */
+  --color-sky-100: #f3f0e7;        /* Alabaster Porcelain */
+  --color-sky-200: #e5dec9;        /* Soft Cream */
+  --color-sky-300: #d4c9ad;        /* Aged Champagne */
+  --color-sky-400: #bcae8d;        /* Chamois Gold */
+  --color-sky-500: #9e8d69;        /* Classic Bronze */
+  --color-sky-600: #af9249;        /* Luxurious Satin Gold Accent */
+  --color-sky-700: #967a39;        /* Deep Ochre Gold */
+  --color-sky-800: #121622;        /* Dark Obsidian Panel */
+  --color-sky-900: #0b0d15;        /* Pitch-black Matte Midnight */
+  --color-sky-950: #05060a;
+
+  --color-blue-900: #0e121e;       /* Velvet Royal Ebony Sidebar */
+  --color-blue-800: #1a1f2e;       /* Polished Dark Brushed Steel */
+  --color-blue-950: #06080e;       /* Absolute Deep Midnight */
+  --color-blue-300: #e5cf8d;       /* Bright Metallic Gold */
+  --color-blue-400: #eedda5;       /* Warm Ivory Sun */
+
+  --color-yellow-400: #dfb64d;     /* High-end Gold Highlight */
+  --color-yellow-500: #c49a37;     /* Solid Antique Gold */
+  --color-yellow-600: #aa812a;
+}
+
+@layer utilities {
+  .geo-card-blue {
+    border-left: 4px solid #af9249;
+  }
+  .geo-card-yellow {
+    border-left: 4px solid #dfb64d;
+  }
+}
+
+/* Print Styles for Digital Receipt (E-Receipt) */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .receipt-print, .receipt-print * {
+    visibility: visible;
+  }
+  .receipt-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.5);
+}
+
